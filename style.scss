@@ -1,0 +1,730 @@
+/*
+ Theme Name:   GeneratePress Child
+ Theme URI:    https://generatepress.com
+ Description:  Default GeneratePress child theme
+ Author:       Tom Usborne
+ Author URI:   https://tomusborne.com
+ Template:     generatepress
+ Version:      0.11
+*/
+/*floating icons*/
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('./fonts/MyriadPro-Regular.woff2') format('woff2'),
+  url('./fonts/MyriadPro-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/*reviews badge */
+.review-holder {
+  height: 65px;
+  margin-left: 150px;
+}
+.top-area {
+  margin-top: -20px;
+}
+/* menu toggle */
+button.menu-toggle {
+  text-align: left;
+}
+/* ul margin */
+.front ul {
+  margin: 0 0 1.5em 1em;
+}
+/*pink*/
+.pink {
+  color: #D30079 !important;
+}
+/*gallery page spacing*/
+.gallery a {
+  padding: 10px;
+}
+/* word wrap for fee guide */
+ul {
+  word-wrap: normal;
+}
+/*contact Page*/
+.gform_body select {
+  border-radius: 5px;
+  padding: 10px 6px !important;
+}
+.gform_body input {
+  border-radius: 5px;
+  padding: 10px !important;
+}
+/*staff page*/
+ul.team-profile h4 {
+  font-style: italic;
+  letter-spacing: .01em;
+  color: #102a40;
+  font-size: 17px;
+  font-family: 'Lato', Helvetica, arial, sans-serif;
+}
+.team-page-heading {
+  background: #C30079;
+  display: block;
+  margin: 20px -39px 0 !important;
+  padding: 20px 30px;
+  font-size: 22px;
+  color: #fff;
+  clear: both;
+}
+ul.team-profile strong {
+  font-size: 11px;
+  margin: 1em;
+  line-height: 8px;
+}
+ul.team-profile {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul.team-profile li {
+  width: 296px;
+  margin: 10px;
+  float: left;
+  text-align: center;
+  min-height: 191px;
+}
+ul.team-profile img {
+  width: 110px;
+  height: auto;
+  margin-bottom: 10px !important;
+  margin-left: 0;
+  border: 1px solid #eee;
+  padding: 8px;
+  float: left;
+}
+a.read-more {
+  color: #fff;
+  background: #575656;
+  font-weight: 300;
+  font-style: italic;
+  padding: 7px 20px;
+  margin-top: 10px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+/*fees*/
+ul.fees-row:hover {
+  background: #eee;
+  color: #C30079;
+  padding: 0 2px;
+}
+ul.fees-row li.fees-from, ul.fees-title li.fees-from {
+  float: left;
+  width: 8%;
+  text-align: right;
+  font-size: 11px;
+  line-height: 24px;
+}
+ul.fees-row li, ul.fees-title li {
+  padding: 8px 2%;
+  display: inline;
+}
+ul.fees-row li.fees-item, ul.fees-title li.fees-item {
+  float: left;
+  width: 50%;
+}
+ul.fees-row li, ul.fees-title li {
+  padding: 8px 2%;
+  display: inline;
+}
+ul.fees-row li.fees-price, ul.fees-title li.fees-price {
+  float: right;
+  width: 28%;
+}
+ul.fees-row li, ul.fees-title li {
+  padding: 8px 2%;
+  display: inline;
+}
+ul.fees-title {
+  clear: both;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #575656;
+  font-size: 15px;
+  overflow: hidden;
+  color: #fff;
+  border-bottom: 0 solid #666;
+}
+ul.fees-row {
+  clear: both;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+#full-width {
+  width: 950px;
+  margin: 20px auto;
+  padding: 1px 20px;
+  border-left: 5px solid #efefef;
+  border-right: 5px solid #efefef;
+}
+full-width:ul {
+  line-height: 24px;
+  display: block;
+  list-style-type: disc;
+}
+/*top phone*/
+.tel-number {
+  font-size: 32px;
+  margin: 10px 10px 0 0;
+  letter-spacing: 1px;
+  color: #575656;
+  font-weight: 400;
+  letter-spacing: -.02em;
+}
+.tel-text {
+  font-size: 20px;
+  font-weight: 300;
+  color: #C30079;
+  margin-right: 5px;
+}
+/*top search bar*/
+#search-5 > form > label > input {
+  padding: 0 5px;
+  font-size: 14px;
+}
+/*footer*/
+.footer {
+  text-align: center;
+  color: white;
+  font-size: 16px;
+}
+.footer p, .footer h2, .footer a {
+  color: white;
+}
+.opening-hours {
+  float: left;
+  display: inline;
+  width: 311px;
+  height: 306px;
+  text-align: center;
+  padding: 12px 10px 0;
+  margin: 0 1px;
+}
+.opening-hours-day {
+  width: 130px;
+  padding-left: 5px;
+  float: left;
+  text-align: left;
+  display: inline;
+}
+.opening-hours-row-first {
+  margin-top: 14px;
+}
+.opening-hours-row, .opening-hours-row-first {
+  border-bottom: 1px solid #5c5c60;
+  width: 275px;
+  height: 20px;
+  padding: 5px 0;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: content-box;
+}
+.opening-hours-row-last {
+  width: 275px;
+  height: 20px;
+  padding: 5px 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*testimonial page*/
+.testimonial {
+  background: #f6f6f6;
+}
+.testimonial, .testimonial-2 {
+  width: 90% px;
+  margin: 20px 0;
+  padding: 30px 40px 20px;
+  border: 1px solid #e6e6e6;
+}
+.testimonial-quote {
+  position: absolute;
+  margin: -6px 0 0 -31px;
+  width: 34px;
+  height: 30px;
+  background: url('http://www.appletreedentistry.co.uk/wp-content/uploads/2017/11/testimonial-quote.png');
+}
+/*treatment page*/
+ul#treatments {
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 0;
+}
+ul#treatments li {
+  display: inline;
+}
+ul#treatments a {
+  float: left;
+  width: 47%;
+  margin: 0 2% 2% 0;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  padding: 8px 0;
+  border: 2px solid #fff;
+  background-color: #575656;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 1px 1px 1px #eee;
+  -webkit-box-shadow: 1px 1px 1px #eee;
+  box-shadow: 1px 1px 1px #eee;
+}
+ul#treatments a:hover {
+  background: #C30079;
+  color: #fff;
+}
+@media screen and (max-width: 425px) {
+  ul#treatments a {
+    width: 100% !important;
+  }
+  .inside-header {
+    padding: 0 40px 40px;
+  }
+  #icon_wrapper {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .review-holder {
+    display: none;
+  }
+}
+.accordion-text {
+  color: #036cb1;
+  font-weight: bold;
+  text-align: justify;
+}
+.accordion-hover-text
+a:hover {
+  font-weight: bold;
+  color: #c30079;
+}
+.white-text {
+  color: #ffffff;
+  font-weight: bold;
+}
+.blue-text {
+  color: #036cb1;
+  font-weight: bold;
+  text-align: justify;
+}
+.magenta-text {
+  color: #c30079;
+  font-weight: bold;
+}
+.bold-text {
+  font-weight: bold;
+}
+.white-background {
+  background-color: rgba(206, 206, 207, 0.26);
+}
+.no-border {
+  background-size: 100% 100%;
+}
+.grey-background {
+  background-color: #cececf;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  background-clip: content-box
+}
+.blue-background {
+  background-color: #036cb1;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  background-clip: content-box;
+}
+.denplan-background {
+  background-color: #4fd659;
+}
+/* ubermenu layerslider fix*/
+.ubermenu-nav {
+  z-index: 1001 !important;
+}
+/*top bar smaller*/
+.inside-top-bar {
+  padding: 5px 10px;
+}
+.page-id-115 .site .site-content {
+  background: #efefef;
+  padding-bottom: 0;
+}
+.team-heading .wpb_text_column {
+  margin-bottom: 20px;
+}
+.team-heading .vc_column-inner {
+  padding-left: 0 !important;
+}
+.team-heading h2 {
+  color: #000000;
+  font-size: 23px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.row-team .vc_column-inner {
+  background-color: #fff;
+  padding: 15px 10px 0 !important;
+}
+.row-team .vc_single_image-wrapper {
+  background: #efefef;
+}
+.row-team .ult-modal-input-wrapper {
+  margin-bottom: 30px !important;
+}
+.row-team h2 {
+  font-size: 23px;
+}
+.row-team h3 {
+  font-size: 19px;
+  color: #036cb1;
+  font-weight: 300;
+}
+.row-team .btn-modal-md {
+  padding: 10px 20px !important;
+}
+.row-team .wpb_text_column {
+  font-size: 13px;
+  margin-bottom: 15px !important;
+}
+.team-bottom .wpb_column {
+  min-height: 260px;
+}
+.team-bottom h2 {
+  color: #fff;
+  font-size: 25px;
+}
+@media (min-width: 600px) {
+  .team-heading h2 {
+    font-size: 30px;
+  }
+  .team-bottom .wpb_column {
+    min-height: 442px;
+  }
+  .team-bottom h2 {
+    font-size: 40px;
+  }
+}
+html.pum-open.pum-open-overlay, html.pum-open.pum-open-overlay.pum-open-fixed .pum-overlay {
+  overflow: hidden !important;
+}
+/*hide in mobile*/
+@media only screen and (max-width: 768px) {
+  .mobile-hide {
+    display: none !important;
+  }
+}
+.site-main .invisalign-banner {
+  min-height: 36.3vw;
+  background-position: right center !important;
+  background-size: cover !important;
+}
+.invisalign-banner h1 {
+  color: #fff;
+  font-size: 29px;
+  font-weight: 700;
+}
+.invisalign-banner p {
+  font-weight: 300;
+  font-size: 24px;
+}
+.invisalign-banner .vc_btn3 {
+  color: #fff !important;
+  background-color: #c30079 !important;
+  border-color: #c30079 !important;
+  font-size: 14px !important;
+  text-transform: uppercase;
+  border-radius: 50px !important;
+  padding: 15px 25px !important;
+  margin-right: 30px;
+}
+.invisalign-cta {
+  background-color: #bebdbd !important;
+}
+.invisalign-cta h2 {
+  color: #fff;
+  font-size: 34px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.site-main .invisalign-form {
+  background-size: cover !important;
+  background-position: right center !important;
+}
+.invisalign-form .gform_wrapper {
+  background-color: #d4e1e6;
+  padding: 10px 20px;
+}
+.invisalign-form .gform_heading {
+  display: none;
+}
+.invisalign-form .top_label div.ginput_container {
+  margin-top: 4px !important;
+}
+.invisalign-form .gfield {
+  padding-right: 0 !important;
+  margin-top: 6px !important;
+}
+.invisalign-form #field_11_2 {
+  margin-top: -8px !important;
+}
+.invisalign-form .gfield_label {
+  font-weight: 400 !important;
+  font-size: 13px !important;
+  text-transform: uppercase;
+}
+.invisalign-form input[type="text"],
+.invisalign-form select,
+.invisalign-form .textarea {
+  border-radius: 0;
+  border-color: #fff;
+  font-size: 14px !important;
+}
+.invisalign-form textarea.medium {
+  height: 120px !important;
+}
+.invisalign-form .gform_button {
+  width: 100% !important;
+  background-color: #c30079;
+  text-transform: uppercase;
+  margin: 0 !important;
+}
+.invisalign-form .gform_footer {
+  margin-top: 0 !important;
+}
+.invisalign-faq {
+  margin-bottom: -40px;
+  background-color: #e3ebf0 !important;
+}
+.invisalign-faq .vc_tta-panels-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 910px;
+}
+.invisalign-faq .vc_tta-panel + .vc_tta-panel {
+  border-top: 1px solid #fff;
+}
+.invisalign-faq .vc_tta-panel-heading {
+  background: #c30079 !important;
+}
+.invisalign-video {
+  background-color: #e3ebf0;
+}
+.top-banner {
+  margin-left: -30px !important;
+  margin-right: -30px !important;
+}
+.top-banner .vc_column-inner {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.top-banner .vc_images_carousel .vc_carousel-control {
+  opacity: .8;
+}
+.top-banner .vc_images_carousel .vc_carousel-control > span {
+  height: 80px;
+  margin-top: 0;
+  transform: translateY(-50%);
+  font-size: 80px;
+  color: #fff;
+  top: 0;
+}
+.new-page-header {
+  margin-top: -40px;
+  background-position: center center;
+  background-size: cover;
+  .vc_column-inner {
+    padding: 35px 7vw !important;
+    display: flex;
+    align-items: center;
+    min-height: 300px;
+    h1 {
+      color: #fff;
+      font-size: 4.15vw;
+      font-family: Myriad Pro;
+      margin-bottom: 0;
+    }
+  }
+}
+.vc_btn3-style-flat.vc_btn3-color-pink {
+  background-color: #c30079 !important;
+}
+@media (min-width: 768px) {
+  .hide-md {
+    display: none !important;
+  }
+  .invisalign-banner {
+    margin-top: -40px;
+  }
+  .invisalign-banner h1 {
+    font-size: 4vw;
+  }
+  .invisalign-banner p {
+    font-size: 2.3vw;
+  }
+  h3.fsz-42,
+  .invisalign-form h3 {
+    font-size: 42px;
+  }
+  .invisalign-form h3 {
+    margin-top: 10%;
+  }
+  .invisalign-faq {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+  .invisalign-faq h2 {
+    font-weight: 400;
+    font-size: 34px;
+    text-transform: uppercase;
+  }
+  .top-banner {
+    margin-left: -40px !important;
+    margin-right: -40px !important;
+  }
+}
+@media (min-width: 960px) {
+  .site-main .invisalign-img-1 {
+    background-position: right center !important;
+  }
+  .site-main .invisalign-img-1 .wpb_column:first-child {
+    background: rgb(252, 252, 252);
+    background: linear-gradient(90deg, rgba(252, 252, 252, 1) 0%, rgba(252, 252, 252, 1) 95%, rgba(252, 252, 252, 0) 100%);
+  }
+  .site-main .invisalign-img-2 {
+    background-position: left center !important;
+  }
+  .site-main .invisalign-img-2 .wpb_column:last-child {
+    background: rgb(252, 252, 252);
+    background: linear-gradient(90deg, rgba(252, 252, 252, 0) 0%, rgba(252, 252, 252, 1) 5%, rgba(252, 252, 252, 1) 100%);
+  }
+  .site-main .invisalign-img-1,
+  .site-main .invisalign-img-2 {
+    min-height: 531px;
+    background-repeat: no-repeat !important;
+  }
+  .site-main .invisalign-img-1 .wpb_single_image,
+  .site-main .invisalign-img-2 .wpb_single_image {
+    display: none !important;
+  }
+}
+@media (min-width: 1280px) {
+  .invisalign-banner .vc_btn3 {
+    font-size: 19px !important;
+    padding: 22px 45px !important;
+  }
+  .invisalign-banner .wpb_single_image {
+    display: inline-block;
+  }
+  .invisalign-video {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .invisalign-video .wpb_text_column {
+    margin-left: auto !important;
+    max-width: 570px;
+  }
+  .invisalign-form .vc_col-sm-6:first-child {
+    width: 37%;
+  }
+}
+@media (min-width: 1600px) {
+  .top-banner .vc_images_carousel .vc_carousel-control {
+    left: -5%;
+  }
+  .top-banner .vc_images_carousel .vc_carousel-control.vc_right {
+    right: -5%;
+  }
+}
+@media (max-width: 959px) {
+  .site-main .invisalign-img-1,
+  .site-main .invisalign-img-2 {
+    background-image: none !important;
+  }
+  .site-main .invisalign-img-1 .wpb_column,
+  .site-main .invisalign-img-2 .wpb_column {
+    width: 100%;
+  }
+  .new-page-header {
+    .vc_column-inner {
+      min-height: 22vw;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .site-main .invisalign-banner {
+    background-image: none !important;
+  }
+}
+.mt--30 {
+  margin-top: -30px !important;
+}
+.mt-175 {
+  margin-top: -175px !important;
+}
+.mb-20 {
+  margin-bottom: 20px !important;
+}
+.pt-20 {
+  padding-top: 20px !important;
+}
+.py-25 {
+  padding-top: 25px !important;
+  padding-bottom: 25px !important;
+}
+.bg-img-1 {
+  padding-top: 64px !important;
+  padding-bottom: 64px !important;
+  background-image: url(http://stage.antwerphousedentistry.co.uk/wp-content/uploads/background-smiling-woman-4.png?id=4421) !important;
+}
+.bg-img-2 {
+  background-color: #4fd659 !important;
+}
+.bg-img-3 {
+  border: 1px solid #c30079;
+  background-color: rgba(87, 86, 86, 0.26) !important;
+  border-radius: 5px !important;
+  margin-bottom: 15px;
+}
+.bg-img-4 {
+  border: 1px solid #c30079;
+  background-color: #fff;
+  border-radius: 5px !important;
+  padding: 10px;
+}
+.bg-img-5 {
+  background: #c1d2d9 url(https://www.antwerphousedentistry.co.uk/wp-content/uploads/invisalign-main-banner.jpg?id=11037) !important;
+}
+.bg-img-6 {
+  background: #fcfcfc url(https://www.antwerphousedentistry.co.uk/wp-content/uploads/invisalign-img-1.jpg?id=11034) !important;
+}
+.bg-img-7 {
+  background: #fcfcfc url(https://www.antwerphousedentistry.co.uk/wp-content/uploads/invisalign-img-2.jpg?id=11033) !important;
+}
+.bg-img-8 {
+  background: #ffffff url(https://www.antwerphousedentistry.co.uk/wp-content/uploads/new-form-bg.jpg?id=11045) !important;
+}
+.bg-img-9 {
+  background-color: #c1d2d9 !important;
+}
+.bg-img-10 {
+  background: #c1d2d9 url(https://www.antwerphousedentistry.co.uk/wp-content/uploads/invisalign-banner-2.jpg?id=13328) !important;
+}
+.bg-img-11 {
+  background: #fcfcfc url(https://www.antwerphousedentistry.co.uk/wp-content/uploads/invisalign-img-6.jpg?id=13322) !important;
+}
+.bg-img-12 {
+  background: #fcfcfc url(https://www.antwerphousedentistry.co.uk/wp-content/uploads/invisalign-img-5.jpg?id=13318) !important;
+}
+.bg-img-13 {
+  margin-bottom: -40px !important;
+  background: #ffffff url(https://www.antwerphousedentistry.co.uk/wp-content/uploads/invisalign-form-bg.jpg?id=13316) !important;
+}
