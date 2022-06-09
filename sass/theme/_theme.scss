@@ -1,13 +1,43 @@
+$pink: #c30079;
 .page-template-page-new {
   background-color: #eaeaea !important;
   #page {
     background-color: #eaeaea !important;
   }
   .site-content {
-    padding: rem(30px 0) !important;
-    max-width: 1141px;
+    padding: 30px 15px !important;
+    max-width: 1171px;
     margin-left: auto;
     margin-right: auto;
+    h2 {
+      color: #000000;
+      font-weight: 400;
+    }
+    h3 {
+      color: $pink;
+      font-weight: 700;
+    }
+    .vc_separator {
+      margin-bottom: 15px;
+      .vc_sep_holder {
+        background-color: #cccccc;
+      }
+    }
+    ol {
+      margin-left: 0;
+      counter-reset: item;
+      font-size: 14px;
+      li {
+        display: flex;
+        margin-bottom: 1rem;
+        &:before {
+          content: counter(item) ". ";
+          counter-increment: item;
+          color: $pink;
+          flex: 0 0 28px;
+        }
+      }
+    }
   }
   .new-page-header {
     background-color: #000;
@@ -30,5 +60,28 @@
   .vc_row.vc_column-gap-10 {
     margin-left: -5px;
     margin-right: -5px;
+  }
+  .vc_tta-color-blue.vc_tta-style-classic {
+    .vc_tta-panel {
+      &.vc_active .vc_tta-panel-heading {
+        border-color: #444444;
+        background-color: #444444;
+      }
+      &.vc_active .vc_tta-panel-title > a {
+        color: #fff !important;
+      }
+      .vc_tta-panel-heading {
+        border-color: #5472d2;
+        background-color: #5472d2;
+      }
+      + .vc_tta-panel .vc_tta-panel-heading {
+        border-top-color: #fff;
+      }
+    }
+    .vc_tta-panel-body {
+      padding-left: 0;
+      padding-right: 0;
+      font-size: 14px;
+    }
   }
 }

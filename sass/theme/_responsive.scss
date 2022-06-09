@@ -1,7 +1,10 @@
 @media (min-width: 960px) {
   .page-template-page-new {
     .site-content {
-      padding: rem(60px 0) !important;
+      padding: 60px 15px !important;
+      h2 {
+        font-size: 34px;
+      }
     }
   }
 }

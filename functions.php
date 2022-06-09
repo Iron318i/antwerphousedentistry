@@ -49,8 +49,8 @@ if (!function_exists('antwerphousedentistry_scripts')) {
     {
         // Get the theme data.
         $the_theme = wp_get_theme();
-        $css_version = filemtime(get_stylesheet_directory_uri() . '/css/theme.min.css');
-        wp_enqueue_style('antwerphousedentistry-styles' . $css_version, get_stylesheet_directory_uri() . '/css/theme.min.css', array(), $css_version);
+        $css_version = date('H-i', time());;
+        wp_enqueue_style('antwerphousedentistry-styles', get_stylesheet_directory_uri() . '/css/theme.min.css', array(), $css_version);
     }
 
 } // End of if function_exists( 'antwerphousedentistry_scripts' ).
