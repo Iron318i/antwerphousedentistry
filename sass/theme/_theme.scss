@@ -84,9 +84,29 @@ $pink: #c30079;
       font-size: 14px;
     }
   }
+  .gform_body {
+    input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="tel"], input[type="number"], textarea, select {
+      border-color: #fff;
+      background-color: #fff;
+      border-radius: 0;
+    }
+    .gfield_required {
+      color: $pink;
+    }
+  }
+  .gform_button {
+    background: $pink !important;
+    font-size: 13px !important;
+    text-transform: uppercase !important;
+    padding: 12px 20px !important;
+    &:hover {
+      background: rgba($pink, .8);
+    }
+  }
 }
 .sidebar-wrp {
   padding: 20px;
+  text-align: center;
   hr {
     margin: 20px 0;
   }
@@ -117,5 +137,48 @@ $pink: #c30079;
         display: block !important;
       }
     }
+  }
+}
+.sidebar-form {
+  padding: 20px;
+  color: #fff;
+  background: #444444;
+  .description {
+    text-align: center;
+    h4 {
+      margin-bottom: 0;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  .gform_wrapper {
+    margin-bottom: 0 !important;
+  }
+  .gfield_label {
+    font-size: 14px !important;
+  }
+  .gfield {
+    margin-top: 0 !important;
+    padding-right: 0 !important;
+  }
+  .gf_name_has_2 {
+    span {
+      width: 100% !important;
+    }
+    .name_last {
+      input {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+  .gform_footer {
+    padding: 0 !important;
+    //margin: 0 !important;
+  }
+  .gform_button {
+    width: 100% !important;
   }
 }
