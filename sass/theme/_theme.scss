@@ -1,0 +1,34 @@
+.page-template-page-new {
+  background-color: #eaeaea !important;
+  #page {
+    background-color: #eaeaea !important;
+  }
+  .site-content {
+    padding: rem(30px 0) !important;
+    max-width: 1141px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .new-page-header {
+    background-color: #000;
+    background-position: center center;
+    background-size: cover;
+    padding: 0 7vw !important;
+    display: flex;
+    align-items: center;
+    min-height: 300px;
+    h1 {
+      color: #fff;
+      font-size: 4.15vw;
+      font-family: Myriad Pro;
+      margin-bottom: 0;
+    }
+  }
+  .vc_btn3-style-flat.vc_btn3-color-pink {
+    background-color: #c30079 !important;
+  }
+  .vc_row.vc_column-gap-10 {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+}

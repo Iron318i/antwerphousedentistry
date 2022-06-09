@@ -529,26 +529,6 @@ html.pum-open.pum-open-overlay, html.pum-open.pum-open-overlay.pum-open-fixed .p
     color: #fff;
     top: 0;
 }
-.new-page-header {
-    margin-top: -40px;
-    background-position: center center;
-    background-size: cover;
-}
-.new-page-header .vc_column-inner {
-    padding: 35px 7vw !important;
-    display: flex;
-    align-items: center;
-    min-height: 300px;
-}
-.new-page-header .vc_column-inner h1 {
-    color: #fff;
-    font-size: 4.15vw;
-    font-family: Myriad Pro;
-    margin-bottom: 0;
-}
-.vc_btn3-style-flat.vc_btn3-color-pink {
-    background-color: #c30079 !important;
-}
 @media (min-width: 768px) {
     .hide-md {
         display: none !important;
@@ -644,9 +624,6 @@ html.pum-open.pum-open-overlay, html.pum-open.pum-open-overlay.pum-open-fixed .p
     .site-main .invisalign-img-1 .wpb_column,
     .site-main .invisalign-img-2 .wpb_column {
         width: 100%;
-    }
-    .new-page-header .vc_column-inner {
-        min-height: 22vw;
     }
 }
 @media (max-width: 767px) {

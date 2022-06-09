@@ -1,2 +1,12 @@
-@media (min-width: 481px) {
+@media (min-width: 960px) {
+  .page-template-page-new {
+    .site-content {
+      padding: rem(60px 0) !important;
+    }
+  }
+}
+@media (max-width: 959px) {
+  .new-page-header {
+    min-height: 22vw;
+  }
 }

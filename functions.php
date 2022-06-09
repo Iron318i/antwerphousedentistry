@@ -49,12 +49,25 @@ if (!function_exists('antwerphousedentistry_scripts')) {
     {
         // Get the theme data.
         $the_theme = wp_get_theme();
-        $theme_version = $the_theme->get('Version');
-        $css_version = $theme_version . '.' . filemtime(get_template_directory() . '/css/theme.min.css');
-
-        wp_enqueue_style('antwerphousedentistry-styles', get_template_directory_uri() . '/css/theme.min.css', array(), $css_version);
+        $css_version = filemtime(get_stylesheet_directory_uri() . '/css/theme.min.css');
+        wp_enqueue_style('antwerphousedentistry-styles' . $css_version, get_stylesheet_directory_uri() . '/css/theme.min.css', array(), $css_version);
     }
 
 } // End of if function_exists( 'antwerphousedentistry_scripts' ).
 
 add_action('wp_enqueue_scripts', 'antwerphousedentistry_scripts');
+
+function page_header()
+{
+    if (is_page_template('page-new.php')) {
+        if (has_post_thumbnail()) {
+            $bg_img = get_the_post_thumbnail_url();
+        } else {
+            $bg_img = get_stylesheet_directory_uri() . "/img/page-header.jpg";
+        }
+        echo '<div class="new-page-header" style="background-image: url(' . $bg_img . ');"><h1>' . get_the_title() . '</h1></div>';
+    }
+}
+
+add_action('generate_after_header', 'page_header');
+

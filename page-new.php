@@ -11,9 +11,6 @@ if (!defined('ABSPATH')) {
 }
 
 get_header(); ?>
-    <div class="new-page-header">
-        <h1><?php the_title() ?></h1>
-    </div>
     <div <?php generate_do_attr('content'); ?>>
         <main <?php generate_do_attr('main'); ?>>
             <?php
@@ -43,7 +40,6 @@ get_header(); ?>
             ?>
         </main>
     </div>
-
 <?php
 /**
  * generate_after_primary_content_area hook.
