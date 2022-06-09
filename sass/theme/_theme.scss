@@ -6,7 +6,7 @@ $pink: #c30079;
   }
   .site-content {
     padding: 30px 15px !important;
-    max-width: 1171px;
+    max-width: 1141px;
     margin-left: auto;
     margin-right: auto;
     h2 {
@@ -82,6 +82,40 @@ $pink: #c30079;
       padding-left: 0;
       padding-right: 0;
       font-size: 14px;
+    }
+  }
+}
+.sidebar-wrp {
+  padding: 20px;
+  hr {
+    margin: 20px 0;
+  }
+  #cqc {
+    max-width: 325px !important;
+    margin-bottom: 0 !important;
+    .cqc-widget {
+      background: none !important;
+      text-align: center !important;
+      border: 0 none !important;
+    }
+    .cqc-container {
+      background: none !important;
+      padding: 0 !important;
+    }
+    .cqc-widget-footer {
+      margin-top: 30px !important;
+      a {
+        font-family: Lato;
+        border-radius: 0 !important;
+        float: none !important;
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        margin-top: 5px !important;
+        padding: 15px !important;
+        text-decoration: none !important;
+        text-transform: uppercase !important;
+        display: block !important;
+      }
     }
   }
 }

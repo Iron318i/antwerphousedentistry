@@ -1,15 +1,21 @@
-@media (min-width: 960px) {
-  .page-template-page-new {
+.page-template-page-new {
+  @media (min-width: 1025px) {
     .site-content {
       padding: 60px 15px !important;
       h2 {
         font-size: 34px;
       }
     }
+    .grid-65 {
+      width: 68%;
+    }
+    .grid-35 {
+      width: 32%;
+    }
   }
-}
-@media (max-width: 959px) {
-  .new-page-header {
-    min-height: 22vw;
+  @media (max-width: 959px) {
+    .new-page-header {
+      min-height: 22vw;
+    }
   }
 }
