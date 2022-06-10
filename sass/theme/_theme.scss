@@ -126,6 +126,13 @@ $pink: #c30079;
       background: rgba($pink, .8);
     }
   }
+  .sidebar-white {
+    background-color: #fff;
+    padding: 20px 0;
+    .wpb_content_element:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
 }
 .sidebar-wrp {
   padding: 20px;

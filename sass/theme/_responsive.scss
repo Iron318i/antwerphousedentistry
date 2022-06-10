@@ -19,9 +19,17 @@
       min-height: 20vw;
     }
   }
+  @media (min-width: 768px) {
+    .vc_col-sm-4.sidebar-white {
+      border-left: 15px solid #eaeaea;
+    }
+  }
   @media (min-width: 960px) {
     .new-page-header {
       min-height: 20vw;
+    }
+    .vc_col-sm-4.sidebar-white {
+      padding: 20px 5px;
     }
   }
   @media (min-width: 1025px) {
