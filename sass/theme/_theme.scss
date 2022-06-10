@@ -38,6 +38,15 @@ $pink: #c30079;
         }
       }
     }
+    .wpb_text_column {
+      font-size: 14px;
+    }
+    li.gfield {
+      margin-top: 7px !important;
+    }
+    .gfield_label {
+      font-size: 15px !important;
+    }
   }
   .new-page-header {
     background-color: #000;
@@ -49,9 +58,11 @@ $pink: #c30079;
     min-height: 300px;
     h1 {
       color: #fff;
-      font-size: 4.15vw;
+      font-size: 4.1vw;
       font-family: Myriad Pro;
       margin-bottom: 0;
+      max-width: 34vw;
+      line-height: .8;
     }
   }
   .vc_btn3-style-flat.vc_btn3-color-pink {
@@ -99,6 +110,7 @@ $pink: #c30079;
     font-size: 13px !important;
     text-transform: uppercase !important;
     padding: 12px 20px !important;
+    width: 100% !important;
     &:hover {
       background: rgba($pink, .8);
     }

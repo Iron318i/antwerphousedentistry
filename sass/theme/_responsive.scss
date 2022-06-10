@@ -1,4 +1,29 @@
 .page-template-page-new {
+  @media only screen and (min-width: 641px) {
+    li.gfield {
+      span.name_first,
+      span.name_middle,
+      span.name_last {
+        input {
+          margin-bottom: 0 !important;
+        }
+      }
+    }
+    .sidebar-form .gf_name_has_2 .name_first input {
+      margin-bottom: 10px !important;
+    }
+    .gform_button {
+      max-width: 325px;
+    }
+    .new-page-header {
+      min-height: 20vw;
+    }
+  }
+  @media (min-width: 960px) {
+    .new-page-header {
+      min-height: 20vw;
+    }
+  }
   @media (min-width: 1025px) {
     .site-content {
       padding: 60px 15px !important;
@@ -13,9 +38,27 @@
       width: 32%;
     }
   }
+  @media (min-width: 1920px) {
+    .new-page-header {
+      min-height: 300px;
+    }
+  }
   @media (max-width: 959px) {
     .new-page-header {
-      min-height: 22vw;
+      min-height: 25vw;
+      h1 {
+        font-size: 6vw;
+        max-width: 50vw;
+      }
+    }
+  }
+  @media (max-width: 599px) {
+    .gform_body {
+      select,
+      input {
+        padding: 5px 10px !important;
+        line-height: 1.5 !important;
+      }
     }
   }
 }
