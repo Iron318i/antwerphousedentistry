@@ -61,6 +61,27 @@
     }
   }
   @media (max-width: 599px) {
+    .new-page-header {
+      min-height: 38vw;
+      background-position: right 50%;
+      position: relative;
+      z-index: 1;
+      h1 {
+        position: relative;
+        z-index: 3;
+        line-height: 1;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(#000, .5);
+        z-index: 2;
+      }
+    }
     .gform_body {
       select,
       input {
