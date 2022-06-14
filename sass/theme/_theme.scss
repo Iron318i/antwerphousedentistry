@@ -136,6 +136,27 @@ $pink: #c30079;
     .wpb_content_element:last-child {
       margin-bottom: 0 !important;
     }
+    .ult-modal-input-wrapper {
+      margin-bottom: 0 !important;
+    }
+  }
+  .blue-text {
+    color: #3a3a3a;
+    font-weight: normal;
+    text-align: left;
+  }
+  .wpb_content_element {
+    ul {
+      color: #5472d2;
+      font-size: 15px;
+      margin-left: 15px;
+      li {
+        margin-bottom: 10px;
+        &::marker {
+          font-size: 1.5em;
+        }
+      }
+    }
   }
 }
 .sidebar-wrp {
@@ -174,11 +195,15 @@ $pink: #c30079;
   }
 }
 .sidebar-form {
-  padding: 20px;
+  padding: 10px 20px 20px;
   color: #fff;
   background: #444444;
+  .gform_legacy_markup_wrapper {
+    margin-top: 0;
+  }
   .description {
     text-align: center;
+    padding-top: 10px;
     h4 {
       margin-bottom: 0;
       font-weight: 700;
@@ -198,14 +223,14 @@ $pink: #c30079;
     margin-top: 0 !important;
     padding-right: 0 !important;
   }
-  .gf_name_has_2 {
-    span {
+  .ginput_container_name {
+    > span {
       width: 100% !important;
+      margin-bottom: 5px;
     }
-    .name_last {
-      input {
-        margin-bottom: 0 !important;
-      }
+    select,
+    input {
+      margin-bottom: 0 !important;
     }
   }
   .gform_footer {
@@ -215,4 +240,29 @@ $pink: #c30079;
   .gform_button {
     width: 100% !important;
   }
+}
+.ratio {
+  position: relative;
+  width: 100%;
+}
+.ratio::before {
+  display: block;
+  padding-top: var(--bs-aspect-ratio);
+  content: "";
+}
+.ratio > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.ratio-1x1 {
+  --bs-aspect-ratio: 100%;
+}
+.ratio-4x3 {
+  --bs-aspect-ratio: 75%;
+}
+.ratio-16x9 {
+  --bs-aspect-ratio: 56.25%;
 }
