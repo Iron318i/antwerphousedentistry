@@ -26,7 +26,7 @@ $pink: #c30079;
     ol {
       margin-left: 0;
       counter-reset: item;
-      font-size: 14px;
+      font-size: 15px;
       li {
         display: flex;
         margin-bottom: 1rem;
@@ -39,7 +39,7 @@ $pink: #c30079;
       }
     }
     .wpb_text_column {
-      font-size: 14px;
+      font-size: 15px;
     }
     li.gfield {
       margin-top: 7px !important;
@@ -140,6 +140,7 @@ $pink: #c30079;
       margin-bottom: 0 !important;
     }
   }
+  .accordion-text,
   .blue-text {
     color: #3a3a3a;
     font-weight: normal;
@@ -149,12 +150,18 @@ $pink: #c30079;
     ul {
       color: #5472d2;
       font-size: 15px;
-      margin-left: 22px;
+      margin-left: 23px;
       li {
         margin-bottom: 10px;
         &::marker {
           font-size: 1.5em;
         }
+      }
+    }
+    a {
+      color: $pink;
+      &:hover {
+        color: rgba($pink, .8);
       }
     }
   }
@@ -265,4 +272,74 @@ $pink: #c30079;
 }
 .ratio-16x9 {
   --bs-aspect-ratio: 56.25%;
+}
+.vc_figure-caption {
+  display: flex;
+  min-height: 45px;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 10px;
+  color: #fff;
+  background-color: $pink;
+  text-transform: uppercase;
+  font-size: 13px !important;
+  margin-top: 0 !important;
+}
+/*fees*/
+ul.fees-row {
+  clear: both;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  &:hover {
+    background: #eee;
+    color: #C30079;
+    padding: 0 2px;
+  }
+  &:nth-child(odd) {
+    background-color: #fff;
+  }
+  li {
+    color: #444444;
+    font-size: 15px;
+    padding: 8px 2%;
+  }
+}
+ul.fees-title {
+  clear: both;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #93abb9;
+  font-size: 17px;
+  overflow: hidden;
+  color: #fff !important;
+  border-bottom: 0 solid #666;
+  li {
+    padding: 10px 2%;
+  }
+}
+ul.fees-row,
+ul.fees-title {
+  margin-left: 0 !important;
+  li {
+    margin-bottom: 0 !important;
+    display: inline;
+  }
+  li.fees-from {
+    float: left;
+    width: 8%;
+    text-align: right;
+    font-size: 13px;
+    line-height: 24px;
+  }
+  li.fees-item {
+    float: left;
+    width: 50%;
+  }
+  li.fees-price {
+    float: right;
+    width: 28%;
+  }
 }

@@ -98,57 +98,6 @@ a.read-more {
     -webkit-border-radius: 5px;
     border-radius: 5px;
 }
-/*fees*/
-ul.fees-row:hover {
-    background: #eee;
-    color: #C30079;
-    padding: 0 2px;
-}
-ul.fees-row li.fees-from, ul.fees-title li.fees-from {
-    float: left;
-    width: 8%;
-    text-align: right;
-    font-size: 11px;
-    line-height: 24px;
-}
-ul.fees-row li, ul.fees-title li {
-    padding: 8px 2%;
-    display: inline;
-}
-ul.fees-row li.fees-item, ul.fees-title li.fees-item {
-    float: left;
-    width: 50%;
-}
-ul.fees-row li, ul.fees-title li {
-    padding: 8px 2%;
-    display: inline;
-}
-ul.fees-row li.fees-price, ul.fees-title li.fees-price {
-    float: right;
-    width: 28%;
-}
-ul.fees-row li, ul.fees-title li {
-    padding: 8px 2%;
-    display: inline;
-}
-ul.fees-title {
-    clear: both;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    background: #575656;
-    font-size: 15px;
-    overflow: hidden;
-    color: #fff;
-    border-bottom: 0 solid #666;
-}
-ul.fees-row {
-    clear: both;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    border-bottom: 1px solid #e6e6e6;
-}
 #full-width {
     width: 950px;
     margin: 20px auto;
