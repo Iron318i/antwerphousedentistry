@@ -1,6 +1,8 @@
 $pink: #c30079;
 .page-template-page-new {
   background-color: #eaeaea !important;
+  .ult_modal-body,
+  .pum-container,
   #page {
     background-color: #eaeaea !important;
   }
@@ -40,6 +42,9 @@ $pink: #c30079;
     }
     .wpb_text_column {
       font-size: 15px;
+      h4 {
+        font-weight: 700;
+      }
     }
     li.gfield {
       margin-top: 7px !important;

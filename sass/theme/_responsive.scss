@@ -43,6 +43,9 @@
       }
       .wpb_text_column {
         font-size: 17px;
+        h4 {
+          font-size: 18px;
+        }
       }
     }
     .grid-65 {
@@ -55,6 +58,11 @@
   @media (min-width: 1920px) {
     .new-page-header {
       min-height: 300px;
+    }
+  }
+  @media (min-width: 960px) and (max-width: 1440px) {
+    .ubermenu .ubermenu-target {
+      padding: 15px 23px 15px 5px !important;
     }
   }
   @media (max-width: 959px) {
