@@ -210,6 +210,16 @@ $pink: #c30079;
   padding: 10px 20px 20px;
   color: #fff;
   background: #444444;
+  .mb-05 {
+    margin-bottom: 5px;
+  }
+  .mb-1 {
+    margin-bottom: 10px;
+    input, select {
+      width: 100%;
+      border-color: #fff;
+    }
+  }
   .gform_legacy_markup_wrapper {
     margin-top: 0;
   }
@@ -230,6 +240,7 @@ $pink: #c30079;
   }
   .gfield_label {
     font-size: 14px !important;
+    display: block;
   }
   .gfield {
     margin-top: 0 !important;
@@ -346,5 +357,22 @@ ul.fees-title {
   li.fees-price {
     float: right;
     width: 28%;
+  }
+}
+.fsz-14 {
+  font-size: 14px !important;
+}
+#gform_5 {
+  .left_label input.large, .left_label select.large, .left_label textarea.medium {
+    width: 100%;
+  }
+  div.ginput_container_name span.name_last {
+    padding-right: 0 !important;
+  }
+}
+.gform_legacy_markup {
+  hr {
+    margin-bottom: 30px;
+    margin-top: 30px;
   }
 }
