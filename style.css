@@ -196,25 +196,25 @@ ul#treatments {
     list-style: none;
     margin: 20px 0 0;
     padding: 0;
+    overflow: hidden;
 }
 ul#treatments li {
     display: inline;
+    margin-bottom: 5px;
+    display: inline-block;
+    float: left;
+    width: 48%;
+    padding: 0 1%;
 }
 ul#treatments a {
-    float: left;
-    width: 47%;
-    margin: 0 2% 2% 0;
+    display: block;
     color: #fff;
     text-decoration: none;
     text-align: center;
     padding: 8px 0;
-    border: 2px solid #fff;
+    border: 0;
     background-color: #575656;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    -moz-box-shadow: 1px 1px 1px #eee;
-    -webkit-box-shadow: 1px 1px 1px #eee;
-    box-shadow: 1px 1px 1px #eee;
+    border-radius: 0px;
 }
 ul#treatments a:hover {
     background: #C30079;

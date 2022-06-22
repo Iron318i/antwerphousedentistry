@@ -1,4 +1,11 @@
 $pink: #c30079;
+.vc_btn3-style-flat.vc_btn3-color-pink {
+  background-color: $pink !important;
+  text-transform: uppercase;
+  &:hover {
+    background: rgba($pink, .8);
+  }
+}
 .page-template-page-new {
   background-color: #eaeaea !important;
   .ult_modal-body,
@@ -68,13 +75,6 @@ $pink: #c30079;
       margin-bottom: 0;
       max-width: 34vw;
       line-height: .8;
-    }
-  }
-  .vc_btn3-style-flat.vc_btn3-color-pink {
-    background-color: $pink !important;
-    text-transform: uppercase;
-    &:hover {
-      background: rgba($pink, .8);
     }
   }
   .vc_row.vc_column-gap-10 {
