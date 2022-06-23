@@ -455,3 +455,18 @@ ul.fees-title {
     cursor: pointer;
   }
 }
+.sidebar .widget {
+  background: none !important;
+}
+#custom_html-5 {
+  h2 {
+    margin-bottom: 0;
+  }
+  .desc {
+    font-size: 20px;
+    color: $pink;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+}
