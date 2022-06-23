@@ -26,6 +26,9 @@ $pink: #c30079;
     background: rgba($pink, .8);
   }
 }
+.fsz-14 {
+  font-size: 14px;
+}
 .page-template-page-new {
   background-color: #eaeaea !important;
   .ult_modal-body,
@@ -468,5 +471,14 @@ ul.fees-title {
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 1.5rem;
+  }
+}
+.page-id-4300 {
+  .new-page-header h1:after {
+    content: ' - present the real you ! ';
+    font-size: .95em;
+  }
+  .ult-modal-input-wrapper {
+    margin-bottom: 15px !important;
   }
 }
