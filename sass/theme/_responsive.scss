@@ -160,17 +160,18 @@
       margin-bottom: 0;
       margin-right: -15px;
     }
+    .wpb_column:nth-child(2) {
+      .vc_column-inner > .wpb_wrapper {
+        padding-left: 10px;
+      }
+    }
     .wpb_text_column {
-      padding-left: 20px;
       font-size: 15px;
       padding-top: 20px;
       margin-bottom: 20px !important;
       h2 {
         font-size: 26px;
       }
-    }
-    .vc_btn3-container {
-      padding-left: 20px;
     }
     &.invert {
       display: flex;
@@ -179,12 +180,11 @@
         margin-left: -15px;
         margin-right: 0;
       }
-      .wpb_text_column {
-        padding-left: 0;
-        padding-right: 40px;
-      }
-      .vc_btn3-container {
-        padding-left: 0;
+      .wpb_column:nth-child(2) {
+        .vc_column-inner > .wpb_wrapper {
+          max-width: 615px;
+          padding-left: 0;
+        }
       }
     }
   }

@@ -392,6 +392,12 @@ ul.fees-title {
     }
   }
 }
+.home-row {
+  .wpb_text_column {
+    padding-top: 20px;
+    margin-bottom: 20px !important;
+  }
+}
 .home-logos {
   display: flex !important;
   flex-wrap: wrap;
@@ -442,5 +448,10 @@ ul.fees-title {
         }
       }
     }
+  }
+}
+#gform20submit {
+  img:hover {
+    cursor: pointer;
   }
 }
