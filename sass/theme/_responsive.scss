@@ -28,6 +28,9 @@
     .new-page-header {
       min-height: 20vw;
     }
+    .lp-banner {
+      min-height: 33vw;
+    }
     .vc_col-sm-4.sidebar-white {
       padding: 20px 5px;
     }
@@ -59,6 +62,9 @@
     .new-page-header {
       min-height: 300px;
     }
+    .lp-banner {
+      min-height: 697px;
+    }
   }
   @media (min-width: 960px) and (max-width: 1440px) {
     .ubermenu .ubermenu-target {
@@ -66,12 +72,16 @@
     }
   }
   @media (max-width: 959px) {
+    .lp-banner,
     .new-page-header {
       min-height: 25vw;
       h1 {
         font-size: 6vw;
         max-width: 50vw;
       }
+    }
+    .lp-banner {
+      min-height: 35vw;
     }
   }
   @media (max-width: 767px) {
@@ -83,7 +93,6 @@
     }
   }
   @media (max-width: 599px) {
-    .lp-banner,
     .new-page-header {
       min-height: 38vw;
       background-position: right 50%;
@@ -94,7 +103,7 @@
         z-index: 3;
         line-height: 1;
       }
-      &:before {
+      &::before {
         content: '';
         position: absolute;
         left: 0;
@@ -103,6 +112,39 @@
         bottom: 0;
         background-color: rgba(#000, .5);
         z-index: 2;
+      }
+    }
+    .lp-banner {
+      padding: 0 !important;
+      .wpb_column {
+        min-height: 38vw;
+        background-position: right 50%;
+        position: relative;
+        z-index: 1;
+        h1 {
+          line-height: 1;
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(#000, .5);
+          z-index: 2;
+        }
+      }
+      .vc_column-inner {
+        z-index: 3 !important;
+        padding-top: 15px !important;
+      }
+      .wpb_text_column {
+        margin: 0.5rem 0 0;
+        p {
+          color: #fff;
+          font-size: 16px;
+        }
       }
     }
     .gform_body {
