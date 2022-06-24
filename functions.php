@@ -61,13 +61,16 @@ add_action('wp_enqueue_scripts', 'antwerphousedentistry_scripts');
 
 function page_header()
 {
-    if (is_page_template('page-new.php')) {
-        if (has_post_thumbnail()) {
-            $bg_img = get_the_post_thumbnail_url();
-        } else {
-            $bg_img = get_stylesheet_directory_uri() . "/img/page-header.jpg";
+    $exclude = array("5832", "5832", "5832", "5832");
+    if (!in_array(get_the_ID(), $exclude)) {
+        if (is_page_template('page-new.php')) {
+            if (has_post_thumbnail()) {
+                $bg_img = get_the_post_thumbnail_url();
+            } else {
+                $bg_img = get_stylesheet_directory_uri() . "/img/page-header.jpg";
+            }
+            echo '<div class="new-page-header" style="background-image: url(' . $bg_img . ');"><h1>' . get_the_title() . '</h1></div>';
         }
-        echo '<div class="new-page-header" style="background-image: url(' . $bg_img . ');"><h1>' . get_the_title() . '</h1></div>';
     }
 }
 

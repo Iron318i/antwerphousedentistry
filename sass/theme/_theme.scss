@@ -84,20 +84,39 @@ $pink: #c30079;
     }
   }
   .new-page-header {
+    min-height: 300px;
+  }
+  .lp-banner,
+  .new-page-header {
     background-color: #000;
     background-position: center center;
     background-size: cover;
     padding: 0 7vw !important;
     display: flex;
     align-items: center;
-    min-height: 300px;
     h1 {
       color: #fff;
-      font-size: 4.1vw;
+      font-size: 4vw;
       font-family: Myriad Pro;
       margin-bottom: 0;
       max-width: 34vw;
       line-height: .8;
+    }
+  }
+  .lp-banner {
+    min-height: 697px;
+    .wpb_text_column {
+      margin: 1rem 0 0;
+      p {
+        font-size: 2vw;
+        font-weight: 300;
+        color: #333;
+      }
+    }
+    h1 {
+      text-transform: uppercase;
+      font-weight: 700;
+      line-height: 1.1;
     }
   }
   .vc_row.vc_column-gap-10 {
@@ -172,6 +191,9 @@ $pink: #c30079;
         color: rgba($pink, .8);
       }
     }
+  }
+  &.page-id-5832 .site-content {
+    padding: 0 !important;
   }
 }
 .sidebar-wrp {
@@ -480,5 +502,31 @@ ul.fees-title {
   }
   .ult-modal-input-wrapper {
     margin-bottom: 15px !important;
+  }
+}
+.page-id-5832 {
+  &.page-template-page-new {
+    .site-content {
+      max-width: 1360px;
+    }
+  }
+}
+.page {
+  .lp-content-bg {
+    min-height: 39vw;
+    background-position: center !important;
+    background-size: cover !important;
+  }
+}
+.lp-content-bg,
+.lp-content-img {
+  .wpb_text_column {
+    text-align: justify;
+    max-width: 570px;
+  }
+}
+.lp-content-img {
+  .wpb_single_image {
+    margin-bottom: 0;
   }
 }
