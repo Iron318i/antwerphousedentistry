@@ -192,8 +192,11 @@ $pink: #c30079;
       }
     }
   }
-  &.page-id-5832 .site-content {
-    padding: 0 !important;
+  &.page-id-5832,
+  &.page-id-5834 {
+    .site-content {
+      padding: 0 !important;
+    }
   }
 }
 .sidebar-wrp {
@@ -504,7 +507,8 @@ ul.fees-title {
     margin-bottom: 15px !important;
   }
 }
-.page-id-5832 {
+.page-id-5832,
+.page-id-5834 {
   &.page-template-page-new {
     .site-content {
       max-width: 1360px;
@@ -517,16 +521,18 @@ ul.fees-title {
     background-position: center !important;
     background-size: cover !important;
   }
+  .lp-content-img {
+    background-position: center !important;
+    background-size: cover !important;
+    .wpb_single_image {
+      margin-bottom: 0;
+    }
+  }
 }
 .lp-content-bg,
 .lp-content-img {
   .wpb_text_column {
     text-align: justify;
     max-width: 570px;
-  }
-}
-.lp-content-img {
-  .wpb_single_image {
-    margin-bottom: 0;
   }
 }
