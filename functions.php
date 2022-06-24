@@ -50,7 +50,7 @@ if (!function_exists('antwerphousedentistry_scripts')) {
         // Get the theme data.
         $the_theme = wp_get_theme();
         //$css_version = date('H-i', time());
-        $css_version = 1.11;
+        $css_version = 1.12;
         wp_enqueue_style('antwerphousedentistry-styles', get_stylesheet_directory_uri() . '/css/theme.min.css', array(), $css_version);
 
         wp_enqueue_script('antwerphousedentistry-scripts', get_stylesheet_directory_uri() . '/js/theme.js', array(), $css_version, true);
