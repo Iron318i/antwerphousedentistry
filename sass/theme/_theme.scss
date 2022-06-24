@@ -194,6 +194,7 @@ $pink: #c30079;
   }
   &.page-id-5832,
   &.page-id-5836,
+  &.page-id-5841,
   &.page-id-5834 {
     .site-content {
       padding: 0 !important;
@@ -510,6 +511,7 @@ ul.fees-title {
 }
 .page-id-5832,
 .page-id-5836,
+.page-id-5841,
 .page-id-5834 {
   &.page-template-page-new {
     .site-content {
@@ -536,5 +538,8 @@ ul.fees-title {
   .wpb_text_column {
     text-align: justify;
     max-width: 570px;
+  }
+  .wpb_video_widget {
+    max-width: 670px;
   }
 }

@@ -49,7 +49,8 @@ if (!function_exists('antwerphousedentistry_scripts')) {
     {
         // Get the theme data.
         $the_theme = wp_get_theme();
-        $css_version = date('H-i', time());;
+        //$css_version = date('H-i', time());
+        $css_version = 1.11;
         wp_enqueue_style('antwerphousedentistry-styles', get_stylesheet_directory_uri() . '/css/theme.min.css', array(), $css_version);
 
         wp_enqueue_script('antwerphousedentistry-scripts', get_stylesheet_directory_uri() . '/js/theme.js', array(), $css_version, true);
@@ -61,7 +62,7 @@ add_action('wp_enqueue_scripts', 'antwerphousedentistry_scripts');
 
 function page_header()
 {
-    $exclude = array("5832", "5834", "5836", "5832");
+    $exclude = array("5832", "5834", "5836", "5841");
     if (!in_array(get_the_ID(), $exclude)) {
         if (is_page_template('page-new.php')) {
             if (has_post_thumbnail()) {
