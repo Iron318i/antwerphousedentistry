@@ -128,3 +128,98 @@ function disable_emojis_tinymce($plugins)
         return array();
     }
 }
+
+/**
+ * Adds new shortcode "ahd_testtiomonial" and registers it to
+ * the Visual Composer plugin
+ *
+ */
+if (!class_exists('AHD_Testtiomonial_Shortcode')) {
+
+    class AHD_Testtiomonial_Shortcode
+    {
+
+        /**
+         * Main constructor
+         */
+        public function __construct()
+        {
+
+            // Registers the shortcode in WordPress
+            add_shortcode('ahd_testtiomonial', __CLASS__ . '::output');
+
+            // Map shortcode to WPBakery so you can access it in the builder
+            if (function_exists('vc_lean_map')) {
+                vc_lean_map('ahd_testtiomonial', __CLASS__ . '::map');
+            }
+
+        }
+
+        /**
+         * Shortcode output
+         */
+        public static function output($atts, $content = null)
+        {
+
+            // Extract shortcode attributes (based on the vc_lean_map function - see next function)
+            $atts = vc_map_get_attributes('ahd_testtiomonial', $atts);
+
+            // Define output and open element div.
+            $output = '<div class="ahd-testimonial"><div class="top">';
+
+            // Display custom heading if enabled and set.
+            if (!empty($atts['video_link'])) {
+                $output .= '<div class="video-link"><a href="' . esc_html($atts['video_link']) . '" target="_blank"><img src="' . get_stylesheet_directory_uri() . '/img/video-yes.png" alt="video"></a></div>';
+            } else {
+                $output .= '<div class="video-link"><img src="' . get_stylesheet_directory_uri() . '/img/video-no.png" alt="no video"></div>';
+            }
+            $output .= '<div class="icon"><img src="' . get_stylesheet_directory_uri() . '/img/testimonial-icon.png" alt="testimonial"></div>';
+            // Display content.
+            $output .= '</div><div class="content">';
+            if ($content) {
+                $output .= wp_kses_post($content);
+            }
+            $output .= '</div>';
+
+            // Close element.
+            $output .= '</div>';
+
+            // Return output
+            return $output;
+
+        }
+
+        /**
+         * Map shortcode to WPBakery
+         *
+         * This is an array of all your settings which become the shortcode attributes ($atts)
+         * for the output. See the link below for a description of all available parameters.
+         *
+         * @since 1.0.0
+         * @link  https://kb.wpbakery.com/docs/inner-api/vc_map/
+         */
+        public static function map()
+        {
+            return array(
+                'name' => esc_html__('AHD Testimonial', 'locale'),
+                'description' => esc_html__('Shortcode outputs Testimonial.', 'locale'),
+                'base' => 'ahd_testtiomonial',
+                'params' => array(
+                    array(
+                        'type' => 'textfield',
+                        'heading' => esc_html__('Video link', 'locale'),
+                        'param_name' => 'video_link',
+                    ),
+                    array(
+                        'type' => 'textarea_html',
+                        'heading' => esc_html__('Custom Text', 'locale'),
+                        'param_name' => 'content',
+                    ),
+                ),
+            );
+        }
+
+    }
+
+}
+new AHD_Testtiomonial_Shortcode;

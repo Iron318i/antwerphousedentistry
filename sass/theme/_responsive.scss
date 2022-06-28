@@ -15,6 +15,11 @@
     .gform_button {
       max-width: 325px;
     }
+    .home {
+      .gform_button {
+        max-width: 100%;
+      }
+    }
     .new-page-header {
       min-height: 20vw;
     }
@@ -277,6 +282,14 @@
     .wpb_wrapper {
       max-width: 615px;
     }
+  }
+  .mw-520 {
+    .wpb_wrapper {
+      max-width: 520px;
+    }
+  }
+  .ahd-testimonial {
+    padding: 30px;
   }
 }
 @media (min-width: 1280px) {
