@@ -63,7 +63,7 @@ add_action('wp_enqueue_scripts', 'antwerphousedentistry_scripts');
 
 function page_header()
 {
-    $exclude = array("14363", "14368", "14372", "14358");
+    $exclude = array("14363", "14368", "14372", "14358", "4297", "4303");
     if (!in_array(get_the_ID(), $exclude)) {
         if (is_page_template('page-new.php')) {
             if (has_post_thumbnail()) {

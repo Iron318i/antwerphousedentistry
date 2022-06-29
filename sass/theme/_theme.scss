@@ -195,6 +195,8 @@ $pink: #c30079;
       }
     }
   }
+  &.page-id-4297,
+  &.page-id-4303,
   &.page-id-14358,
   &.page-id-14368,
   &.page-id-14372,
@@ -509,6 +511,8 @@ ul.fees-title {
     margin-bottom: 15px !important;
   }
 }
+.page-id-4297,
+.page-id-4303,
 .page-id-14358,
 .page-id-14368,
 .page-id-14372,
@@ -577,5 +581,18 @@ ul.fees-title {
     margin-bottom: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+.page-id-4297 {
+  .btn-modal {
+    max-width: 300px;
+  }
+  #gform_9 .gform_button {
+    max-width: 100%;
+  }
+  .vc_figure:hover {
+    .vc_figure-caption {
+      background-color: #444444;
+    }
   }
 }
