@@ -13,7 +13,7 @@ $pink: #c30079;
   input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="tel"], input[type="number"], textarea, select {
     border-color: #fff;
     background-color: #fff;
-    border-radius: 0;
+    border-radius: 0 !important;
   }
   .gfield_required {
     color: $pink !important;
@@ -195,10 +195,10 @@ $pink: #c30079;
       }
     }
   }
-  &.page-id-5832,
-  &.page-id-5836,
-  &.page-id-5841,
-  &.page-id-5834 {
+  &.page-id-14358,
+  &.page-id-14368,
+  &.page-id-14372,
+  &.page-id-14363 {
     .site-content {
       padding: 0 !important;
     }
@@ -509,10 +509,10 @@ ul.fees-title {
     margin-bottom: 15px !important;
   }
 }
-.page-id-5832,
-.page-id-5836,
-.page-id-5841,
-.page-id-5834 {
+.page-id-14358,
+.page-id-14368,
+.page-id-14372,
+.page-id-14363 {
   &.page-template-page-new {
     .site-content {
       max-width: 1360px;
