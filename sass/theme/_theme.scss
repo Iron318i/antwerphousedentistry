@@ -1,4 +1,7 @@
 $pink: #c30079;
+.text-pink {
+  color: $pink !important;
+}
 .vc_btn3-style-flat.vc_btn3-color-pink {
   background-color: $pink !important;
   text-transform: uppercase;
@@ -552,5 +555,27 @@ ul.fees-title {
   .top {
     display: flex;
     justify-content: space-between;
+  }
+}
+.ahd-case-studies {
+  hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  h4 {
+    font-size: 26px;
+    line-height: 1.2;
+    margin-bottom: .5rem;
+  }
+  .img {
+    img {
+      margin-bottom: .7rem;
+    }
+  }
+  .case {
+    font-size: 14px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 }

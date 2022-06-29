@@ -186,6 +186,36 @@
       }
     }
   }
+  .ahd-case-studies {
+    .studies-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h2 {
+        margin-bottom: 0;
+      }
+    }
+    .case {
+      display: flex;
+      width: 100%;
+      .content,
+      .img,
+      hr {
+        flex: 0 0 auto;
+      }
+      .img {
+        width: 35%;
+      }
+      .content {
+        padding-left: 25px;
+        box-sizing: border-box;
+        width: 65%;
+      }
+      hr {
+        width: 100%;
+      }
+    }
+  }
 }
 @media (min-width: 768px) {
   .home-form-row {
@@ -290,6 +320,21 @@
   }
   .ahd-testimonial {
     padding: 30px;
+  }
+  .ahd-case-studies {
+    .grid-item,
+    .grid-sizer {
+      width: 49%;
+    }
+    .gutter-sizer {
+      width: 2%;
+    }
+    .case {
+      .content,
+      .img {
+        width: 50%;
+      }
+    }
   }
 }
 @media (min-width: 1280px) {

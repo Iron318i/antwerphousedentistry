@@ -53,6 +53,7 @@ if (!function_exists('antwerphousedentistry_scripts')) {
         $css_version = 1.14;
         wp_enqueue_style('antwerphousedentistry-styles', get_stylesheet_directory_uri() . '/css/theme.min.css', array(), $css_version);
 
+        wp_enqueue_script('masonry-scripts', get_stylesheet_directory_uri() . '/js/masonry.pkgd.min.js', array(), $css_version, true);
         wp_enqueue_script('antwerphousedentistry-scripts', get_stylesheet_directory_uri() . '/js/theme.js', array(), $css_version, true);
     }
 
@@ -128,6 +129,51 @@ function disable_emojis_tinymce($plugins)
         return array();
     }
 }
+
+add_action('init', 'register_ahd_post_type');
+
+function register_ahd_post_type()
+{
+    register_taxonomy('casestudiecat', ['casestudie'], [
+        'label' => 'Treatment types',
+        'public' => false,
+        'show_in_nav_menus' => false,
+        'show_ui' => true,
+        'show_tagcloud' => false,
+        'hierarchical' => true,
+        'rewrite' => false,
+        'show_admin_column' => true,
+    ]);
+    register_post_type('casestudie', array(
+        'label' => 'casestudies',
+        'labels' => array(
+            'name' => 'Cases tudies',
+            'singular_name' => 'Case studie',
+            'project_name' => 'Case studies',
+            'all_items' => 'All case studies',
+            'add_new' => 'Add case studie',
+            'add_new_item' => 'Add new case studie',
+            'edit' => 'Edit',
+            'edit_item' => 'Edit case studie',
+            'new_item' => 'New case studie',
+        ),
+        'description' => '',
+        'public' => false,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'show_in_rest' => false,
+        'rest_base' => '',
+        'show_in_menu' => true,
+        'exclude_from_search' => true,
+        'capability_type' => 'post',
+        'supports' => array('title', 'editor'),
+        'taxonomies' => array('casestudiecat'),
+        'hierarchical' => false,
+        'query_var' => true,
+    ));
+}
+
+add_image_size('casestudie', 275, 132, array('center', 'center'));
 
 /**
  * Adds new shortcode "ahd_testtiomonial" and registers it to
@@ -222,4 +268,127 @@ if (!class_exists('AHD_Testtiomonial_Shortcode')) {
     }
 
 }
+
 new AHD_Testtiomonial_Shortcode;
+/**
+ * Adds new shortcode "ahd_casestudies" and registers it to
+ * the Visual Composer plugin
+ *
+ */
+if (!class_exists('AHD_Casestudies_Shortcode')) {
+
+    class AHD_Casestudies_Shortcode
+    {
+
+        /**
+         * Main constructor
+         */
+        public function __construct()
+        {
+
+            // Registers the shortcode in WordPress
+            add_shortcode('ahd_casestudies', __CLASS__ . '::output');
+
+            // Map shortcode to WPBakery so you can access it in the builder
+            if (function_exists('vc_lean_map')) {
+                vc_lean_map('ahd_casestudies', __CLASS__ . '::map');
+            }
+
+        }
+
+        /**
+         * Shortcode output
+         */
+        public static function output($atts, $content = null)
+        {
+
+            // Extract shortcode attributes (based on the vc_lean_map function - see next function)
+            $atts = vc_map_get_attributes('ahd_casestudies', $atts);
+
+            // Define output and open element div.
+            $output = '<div class="ahd-case-studies">';
+            $output .= '<div class="studies-header"><h2 class="text-pink">Choose treatment type</h2>';
+            $output .= '<select id="treatmentType">';
+            $output .= '<option value="all">All</option>';
+            $terms = get_terms([
+                'taxonomy' => 'casestudiecat'
+            ]);
+            if ($terms && !is_wp_error($terms)) {
+                foreach ($terms as $term) {
+                    $output .= '<option value="tax-' . $term->term_id . '">' . $term->name . '</option>';
+                }
+            }
+            $output .= '</select>';
+            $output .= '</div>';
+            $output .= '<hr>';
+            $output .= '<div class="grid">';
+            $output .= '<div class="grid-sizer"></div>';
+            $output .= '<div class="gutter-sizer"></div>';
+
+            $args = array(
+                'posts_per_page' => -1,
+                'post_type' => 'casestudie',
+            );
+
+            $query = new WP_Query($args);
+
+            if ($query->have_posts()) {
+                while ($query->have_posts()) {
+                    $query->the_post();
+                    $casestudieterms = get_the_terms(get_the_ID(), 'casestudiecat');
+                    $output .= '<div class="grid-item">';
+                    $output .= '<div class="case';
+
+                    if ($casestudieterms && !is_wp_error($casestudieterms)) {
+                        foreach ($casestudieterms as $term) {
+                            $output .= ' tax-' . $term->term_id;
+                        }
+                    }
+                    $output .= '">';
+                    $output .= '<div class="img">';
+                    $images = get_field('images', get_the_ID());
+                    if ($images):
+                        foreach ($images as $image_id):
+                            $output .= wp_get_attachment_image($image_id, 'casestudie');
+                        endforeach;
+                    endif;
+                    $output .= '</div>';
+                    $output .= '<div class="content">';
+                    $output .= '<h4>' . get_the_title() . '</h4>';
+                    $output .= get_the_content();
+                    $output .= '</div>';
+                    $output .= '</div>';
+                    $output .= '</div>';
+                }
+            }
+            wp_reset_postdata();
+            $output .= '</div>';
+            $output .= '</div>';
+
+            // Return output
+            return $output;
+
+        }
+
+        /**
+         * Map shortcode to WPBakery
+         *
+         * This is an array of all your settings which become the shortcode attributes ($atts)
+         * for the output. See the link below for a description of all available parameters.
+         *
+         * @since 1.0.0
+         * @link  https://kb.wpbakery.com/docs/inner-api/vc_map/
+         */
+        public static function map()
+        {
+            return array(
+                'name' => esc_html__('AHD Case Studies', 'locale'),
+                'description' => esc_html__('Shortcode outputs Testimonial.', 'locale'),
+                'base' => 'ahd_casestudies',
+            );
+        }
+
+    }
+
+}
+new AHD_Casestudies_Shortcode;
