@@ -376,6 +376,7 @@ html.pum-open.pum-open-overlay, html.pum-open.pum-open-overlay.pum-open-fixed .p
 .invisalign-banner p {
     font-weight: 300;
     font-size: 24px;
+    color: #fff;
 }
 .invisalign-banner .vc_btn3 {
     color: #fff !important;
@@ -388,7 +389,7 @@ html.pum-open.pum-open-overlay, html.pum-open.pum-open-overlay.pum-open-fixed .p
     margin-right: 30px;
 }
 .invisalign-cta {
-    background-color: #bebdbd !important;
+    background-color: #474747 !important;
 }
 .invisalign-cta h2 {
     color: #fff;
@@ -632,7 +633,7 @@ html.pum-open.pum-open-overlay, html.pum-open.pum-open-overlay.pum-open-fixed .p
     background-color: #c1d2d9 !important;
 }
 .bg-img-10 {
-    background: #c1d2d9 url(https://www.antwerphousedentistry.co.uk/wp-content/uploads/invisalign-banner-2.jpg?id=13328) !important;
+    background: #c1d2d9 url(https://www.antwerphousedentistry.co.uk/wp-content/uploads/invisalign-dark.jpg) !important;
 }
 .bg-img-11 {
     background: #fcfcfc url(https://www.antwerphousedentistry.co.uk/wp-content/uploads/invisalign-img-6.jpg?id=13322) !important;

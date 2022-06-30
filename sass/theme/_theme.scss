@@ -113,7 +113,7 @@ $pink: #c30079;
       p {
         font-size: 2vw;
         font-weight: 300;
-        color: #333;
+        color: #fff;
       }
     }
     h1 {
@@ -777,6 +777,13 @@ ul.fees-title {
         font-weight: 400 !important;
         font-size: 14px;
       }
+    }
+  }
+}
+.sidebar-form {
+  #gform_wrapper_8 {
+    .gform_heading {
+      display: none !important;
     }
   }
 }
