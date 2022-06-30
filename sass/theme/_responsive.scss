@@ -216,6 +216,9 @@
       }
     }
   }
+  .site-header #top .more {
+    display: none !important;
+  }
 }
 @media (min-width: 768px) {
   .home-form-row {
@@ -360,6 +363,11 @@
   }
 }
 @media (min-width: 1460px) {
+  .site-header {
+    .main .logo {
+      flex-grow: 1;
+    }
+  }
   .home-row {
     .wpb_text_column {
       font-size: 17px;
@@ -382,6 +390,46 @@
     }
   }
 }
+@media (max-width: 1580px) {
+  .site-header {
+    #top .sub-menu {
+      flex-wrap: wrap;
+      .menu-item {
+        flex: 0 0 23%;
+      }
+      .menu-item-13905 {
+        margin-left: 0;
+      }
+    }
+    .main {
+      .logo {
+        width: 20%;
+      }
+    }
+    #searchform .field {
+      max-width: 150px;
+    }
+    .contact a {
+      padding: 12px 15px;
+    }
+  }
+}
+@media (max-width: 1365px) {
+  .site-header {
+    #top a {
+      font-size: 14px;
+    }
+    .content .info {
+      font-size: 14px;
+      strong {
+        font-size: 13px;
+      }
+    }
+    #wpac-google-review {
+      max-width: 170px;
+    }
+  }
+}
 @media (max-width: 1279px) {
   .home-logos {
     .wpb_column:nth-child(4) {
@@ -391,11 +439,52 @@
       margin-right: auto;
     }
   }
+  .site-header {
+    #top {
+      flex-wrap: wrap;
+      > li {
+        flex: 0 0 100%;
+        margin-left: 0 !important;
+      }
+      .sub-menu {
+        margin-bottom: .5rem;
+      }
+    }
+    .main {
+      flex-wrap: wrap;
+      .right {
+        margin-top: 1rem;
+        justify-content: center;
+        flex: 0 0 100%;
+      }
+      .logo {
+        width: 30%;
+      }
+    }
+  }
 }
 @media (max-width: 1023px) {
   .home-row {
     .wpb_column {
       width: 100%;
+    }
+  }
+}
+@media (max-width: 800px) {
+  .site-header {
+    #top .sub-menu {
+      justify-content: center;
+      .menu-item {
+        flex: 0 0 30%;
+        margin-left: 0 !important;
+      }
+    }
+    .main {
+      justify-content: center;
+      .content {
+        justify-content: center;
+        flex: 0 0 100%;
+      }
     }
   }
 }
@@ -407,4 +496,35 @@
     }
   }
 }
-
+@media (max-width: 599px) {
+  .site-header {
+    #top .sub-menu {
+      display: none;
+      .menu-item {
+        flex: 0 0 100%;
+      }
+    }
+    #top .more a {
+      font-weight: 400;
+    }
+    .main {
+      .logo {
+        width: 65%;
+      }
+      .content {
+        flex-wrap: wrap;
+        > div {
+          flex: 0 0 100%;
+        }
+        .info {
+          margin: 0 0 15px 0 !important;
+          padding: 0;
+          border: 0 none;
+        }
+      }
+      .search {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

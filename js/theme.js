@@ -18,5 +18,10 @@
         }
     });
 
+    $('#top .more a').click(function () {
+        $('#top .sub-menu').show();
+        $('#top .more').hide();
+    });
+
 }(jQuery);
 
