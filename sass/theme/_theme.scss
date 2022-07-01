@@ -805,3 +805,19 @@ ul.fees-title {
     line-height: 1.2;
   }
 }
+.ul-black {
+  strong {
+    color: #000;
+  }
+  ul {
+    li {
+      margin-bottom: 0 !important;
+      color: #000;
+      font-size: 14px;
+    }
+    li::marker {
+      font-size: 1em !important;
+      color: #6e6f6f;
+    }
+  }
+}
