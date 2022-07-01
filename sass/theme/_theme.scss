@@ -787,3 +787,20 @@ ul.fees-title {
     }
   }
 }
+.ahd-consent-form {
+  display: flex;
+  align-items: center;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  .heading {
+    flex-grow: 1;
+    padding: 0 15px;
+  }
+  h4 {
+    margin: 0 auto;
+    font-size: 20px;
+    max-width: 250px;
+  }
+}

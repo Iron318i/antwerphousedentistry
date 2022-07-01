@@ -393,6 +393,96 @@ if (!class_exists('AHD_Casestudies_Shortcode')) {
 }
 new AHD_Casestudies_Shortcode;
 
+/**
+ * Adds new shortcode "ahd_testtiomonial" and registers it to
+ * the Visual Composer plugin
+ *
+ */
+if (!class_exists('AHD_Consent_Form_Shortcode')) {
+
+    class AHD_Consent_Form_Shortcode
+    {
+
+        /**
+         * Main constructor
+         */
+        public function __construct()
+        {
+
+            // Registers the shortcode in WordPress
+            add_shortcode('ahd_consent_form', __CLASS__ . '::output');
+
+            // Map shortcode to WPBakery so you can access it in the builder
+            if (function_exists('vc_lean_map')) {
+                vc_lean_map('ahd_consent_form', __CLASS__ . '::map');
+            }
+
+        }
+
+        /**
+         * Shortcode output
+         */
+        public static function output($atts, $content = null)
+        {
+
+            // Extract shortcode attributes (based on the vc_lean_map function - see next function)
+            $atts = vc_map_get_attributes('ahd_consent_form', $atts);
+            // Define output and open element div.
+            $url_link = vc_build_link($atts['page_link']);
+
+            $output = '<div class="ahd-consent-form">';
+            $output .= '<div class="icon">' . wp_get_attachment_image($atts['icon'], array(87, 87), false, array("class" => '')) . '</div>';
+            $output .= '<div class="heading"><h4>' . $atts['heading'] . '</h4></div>';
+            $output .= '<div class="link"><a href="' . $url_link['url'] . '"><img src="https://www.antwerphousedentistry.co.uk/wp-content/uploads/menu-consent-gray.png" alt="' . esc_html($atts['heading']) . '"></a></div>';
+            $output .= '</div>';
+
+            // Return output
+            return $output;
+
+        }
+
+        /**
+         * Map shortcode to WPBakery
+         *
+         * This is an array of all your settings which become the shortcode attributes ($atts)
+         * for the output. See the link below for a description of all available parameters.
+         *
+         * @since 1.0.0
+         * @link  https://kb.wpbakery.com/docs/inner-api/vc_map/
+         */
+        public static function map()
+        {
+            return array(
+                'name' => esc_html__('AHD Consent Form', 'locale'),
+                'description' => esc_html__('Shortcode outputs Consent Form.', 'locale'),
+                'base' => 'ahd_consent_form',
+                'params' => array(
+                    array(
+                        'type' => 'attach_image',
+                        'heading' => esc_html__('Icon', 'locale'),
+                        'param_name' => 'icon',
+                        "description" => __("87x87px", 'locale')
+                    ),
+                    array(
+                        'type' => 'textarea',
+                        'heading' => esc_html__('Heading', 'locale'),
+                        'param_name' => 'heading',
+                    ),
+                    array(
+                        'type' => 'vc_link',
+                        'heading' => esc_html__('Link', 'locale'),
+                        'param_name' => 'page_link',
+                    ),
+                ),
+            );
+        }
+
+    }
+
+}
+
+new AHD_Consent_Form_Shortcode;
+
 add_action('after_setup_theme', function () {
     register_nav_menus(
         array(
