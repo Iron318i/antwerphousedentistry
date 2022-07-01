@@ -373,6 +373,11 @@
       flex-grow: 1;
     }
   }
+  .ubermenu-nav {
+    > li + li {
+      margin-left: 1vw !important;
+    }
+  }
   .home-row {
     .wpb_text_column {
       font-size: 17px;
