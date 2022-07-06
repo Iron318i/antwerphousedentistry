@@ -50,7 +50,7 @@ if (!function_exists('antwerphousedentistry_scripts')) {
         // Get the theme data.
         $the_theme = wp_get_theme();
         //$css_version = date('H-i', time());
-        $css_version = 1.18;
+        $css_version = 1.19;
         wp_enqueue_style('antwerphousedentistry-styles', get_stylesheet_directory_uri() . '/css/theme.min.css', array(), $css_version);
 
         wp_enqueue_script('masonry-scripts', get_stylesheet_directory_uri() . '/js/masonry.pkgd.min.js', array(), $css_version, true);
@@ -430,11 +430,11 @@ if (!class_exists('AHD_Consent_Form_Shortcode')) {
             // Define output and open element div.
             $url_link = vc_build_link($atts['page_link']);
 
-            $output = '<div class="ahd-consent-form">';
+            $output = '<a href="' . $url_link['url'] . '" class="ahd-consent-form">';
             $output .= '<div class="icon">' . wp_get_attachment_image($atts['icon'], array(87, 87), false, array("class" => '')) . '</div>';
-            $output .= '<div class="heading"><h4>' . $atts['heading'] . '</h4></div>';
-            $output .= '<div class="link"><a href="' . $url_link['url'] . '"><img src="https://www.antwerphousedentistry.co.uk/wp-content/uploads/menu-consent-gray.png" alt="' . esc_html($atts['heading']) . '"></a></div>';
-            $output .= '</div>';
+            $output .= '<div class="heading"><h4><span>' . $atts['heading'] . '</span></h4></div>';
+            $output .= '<div class="link"><img src="https://www.antwerphousedentistry.co.uk/wp-content/uploads/menu-consent-gray.png" alt="' . esc_html($atts['heading']) . '"></div>';
+            $output .= '</a>';
 
             // Return output
             return $output;

@@ -803,6 +803,15 @@ ul.fees-title {
     font-size: 20px;
     max-width: 250px;
     line-height: 1.2;
+    color: #3a3a3a;
+  }
+  &:hover {
+    h4 {
+      font-weight: 700;
+      span {
+        border-bottom: 1px solid rgba(#3a3a3a, .6);
+      }
+    }
   }
 }
 .ul-black {
