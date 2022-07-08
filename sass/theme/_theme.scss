@@ -196,6 +196,7 @@ $pink: #c30079;
     }
   }
   &.page-id-4297,
+  &.page-id-4300,
   &.page-id-4303,
   &.page-id-14358,
   &.page-id-14368,
@@ -503,15 +504,12 @@ ul.fees-title {
   }
 }
 .page-id-4300 {
-  .new-page-header h1:after {
-    content: ' - present the real you ! ';
-    font-size: .95em;
-  }
   .ult-modal-input-wrapper {
     margin-bottom: 15px !important;
   }
 }
 .page-id-4297,
+.page-id-4300,
 .page-id-4303,
 .page-id-14358,
 .page-id-14368,
@@ -834,4 +832,8 @@ ul.fees-title {
   .new-page-header {
     background-image: url('https://www.antwerphousedentistry.co.uk/wp-content/uploads/Consent-Forms_01.jpg') !important;
   }
+}
+button.covid {
+  background-color: #5472d2 !important;
+  width: 260px;
 }

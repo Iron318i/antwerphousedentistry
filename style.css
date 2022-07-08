@@ -402,7 +402,7 @@ html.pum-open.pum-open-overlay, html.pum-open.pum-open-overlay.pum-open-fixed .p
     background-position: right center !important;
 }
 .invisalign-form .gform_wrapper {
-    background-color: #d4e1e6;
+    background-color: #474747;
     padding: 10px 20px;
 }
 .invisalign-form .gform_heading {
@@ -422,6 +422,7 @@ html.pum-open.pum-open-overlay, html.pum-open.pum-open-overlay.pum-open-fixed .p
     font-weight: 400 !important;
     font-size: 13px !important;
     text-transform: uppercase;
+    color: #fff;
 }
 .invisalign-form input[type="text"],
 .invisalign-form select,
@@ -435,6 +436,7 @@ html.pum-open.pum-open-overlay, html.pum-open.pum-open-overlay.pum-open-fixed .p
 }
 .invisalign-form .gform_button {
     width: 100% !important;
+    max-width: 600px !important;
     background-color: #c30079;
     text-transform: uppercase;
     margin: 0 !important;
