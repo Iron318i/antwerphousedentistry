@@ -707,13 +707,18 @@ ul.fees-title {
         top: 0;
         width: 23px;
         height: 21px;
-        background-size: 23px 231px;
+        background-size: 23px 252px;
         background-position: 0 0;
         background-image: url(../img/topbar-sprite.png);
         background-repeat: no-repeat;
       }
       &:hover {
         opacity: .8;
+      }
+    }
+    .sub-menu {
+      a {
+        font-weight: 400;
       }
     }
     .icon-02 a:before {
@@ -730,6 +735,9 @@ ul.fees-title {
     }
     .icon-06 a:before {
       background-position: 0 -105px;
+    }
+    .icon-11 a:before {
+      background-position: 0 -231px;
     }
     .icon-07 a:before {
       background-position: 0 -126px;

@@ -508,10 +508,17 @@
 }
 @media (max-width: 599px) {
   .site-header {
-    #top .sub-menu {
-      display: none;
-      .menu-item {
-        flex: 0 0 100%;
+    #top {
+      .sub-menu {
+        display: none;
+        .menu-item {
+          flex: 0 0 100%;
+        }
+      }
+      .icon-11 {
+        .sub-menu {
+          display: flex;
+        }
       }
     }
     #top .more a {
