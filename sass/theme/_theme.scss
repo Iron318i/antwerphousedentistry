@@ -845,3 +845,6 @@ button.covid {
   background-color: #5472d2 !important;
   width: 260px;
 }
+.main-navigation.toggled .main-nav > ul {
+  display: block !important;
+}
