@@ -768,6 +768,15 @@ ul.fees-title {
     .icon-01 {
       flex-grow: 1;
     }
+    .icon-01,
+    .icon-11 {
+      > a {
+        color: #029afe;
+        &:hover {
+          filter: brightness(0) invert(1);
+        }
+      }
+    }
   }
 }
 .main-navigation {
@@ -849,4 +858,13 @@ button.covid {
 }
 .main-navigation.toggled .main-nav > ul {
   display: block !important;
+}
+.page-id-679 {
+  .entry-content {
+    .vc_col-sm-3 {
+      .wpb_single_image {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
