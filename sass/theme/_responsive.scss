@@ -377,6 +377,11 @@
   .site-header .main {
     padding: 28px;
   }
+  .ubermenu-submenu-id-2783 {
+    .ubermenu-column-1-4 {
+      width: 20% !important;
+    }
+  }
 }
 @media (min-width: 1460px) {
   .site-header {
@@ -408,6 +413,11 @@
   .home {
     .sidebar-form {
       margin-left: -20px;
+    }
+  }
+  .ubermenu-submenu-id-2783 {
+    .ubermenu-column-1-4 {
+      width: 16.66% !important;
     }
   }
 }
