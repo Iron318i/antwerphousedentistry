@@ -405,6 +405,14 @@ html.pum-open.pum-open-overlay, html.pum-open.pum-open-overlay.pum-open-fixed .p
     background-color: #474747;
     padding: 10px 20px;
 }
+.invisalign-form .gform_wrapper .gfield_date_dropdown_month,
+.invisalign-form .gform_wrapper .gfield_date_dropdown_day,
+.invisalign-form .gform_wrapper .gfield_date_dropdown_year {
+    flex-grow: 1;
+}
+.invisalign-form .gform_wrapper .gfield_date_dropdown_year {
+    margin-right: 0 !important;
+}
 .invisalign-form .gform_heading {
     display: none;
 }
@@ -644,7 +652,6 @@ html.pum-open.pum-open-overlay, html.pum-open.pum-open-overlay.pum-open-fixed .p
     background: #fcfcfc url(https://www.antwerphousedentistry.co.uk/wp-content/uploads/invisalign-img-5.jpg?id=13318) !important;
 }
 .bg-img-13 {
-    margin-bottom: -40px !important;
     background: #ffffff url(https://www.antwerphousedentistry.co.uk/wp-content/uploads/invisalign-form-bg.jpg?id=13316) !important;
 }
 /*# sourceMappingURL=style.css.map */

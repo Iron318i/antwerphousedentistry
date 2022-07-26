@@ -195,14 +195,16 @@ $pink: #c30079;
       }
     }
   }
+  &.page-id-95,
+  &.page-id-5805,
   &.page-id-679,
   &.page-id-4297,
   &.page-id-4300,
   &.page-id-4303,
-  &.page-id-14358,
-  &.page-id-14368,
-  &.page-id-14372,
-  &.page-id-14363 {
+  &.page-id-5832,
+  &.page-id-5836,
+  &.page-id-5841,
+  &.page-id-5834 {
     .site-content {
       padding: 0 !important;
     }
@@ -509,14 +511,16 @@ ul.fees-title {
     margin-bottom: 15px !important;
   }
 }
+.page-id-95,
+.page-id-5805,
 .page-id-679,
 .page-id-4297,
 .page-id-4300,
 .page-id-4303,
-.page-id-14358,
-.page-id-14368,
-.page-id-14372,
-.page-id-14363 {
+.page-id-5832,
+.page-id-5836,
+.page-id-5841,
+.page-id-5834 {
   &.page-template-page-new {
     .site-content {
       max-width: 1360px;
@@ -863,5 +867,24 @@ button.covid {
         margin-bottom: 0;
       }
     }
+  }
+}
+.ubermenu-item-header.ubermenu-column-full {
+  > .ubermenu-item-layout-text_only {
+    display: block;
+    background-color: #e3ebf0;
+    color: #000;
+    font-size: 13px;
+    font-weight: 400 !important;
+    text-transform: uppercase !important;
+  }
+}
+#menu-item-2783 {
+  .menu-item-type-custom a {
+    display: block;
+    background-color: #e3ebf0;
+    color: #000;
+    font-size: 13px;
+    text-transform: uppercase !important;
   }
 }
