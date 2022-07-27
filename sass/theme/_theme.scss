@@ -860,6 +860,10 @@ button.covid {
 .main-navigation.toggled .main-nav > ul {
   display: block !important;
 }
+.main-navigation.toggled .ubermenu-responsive-default.ubermenu-responsive.ubermenu-responsive-collapse {
+  visibility: visible;
+  overflow: visible !important;
+}
 .page-id-679 {
   .entry-content {
     .vc_col-sm-3 {
@@ -877,6 +881,7 @@ button.covid {
     font-size: 13px;
     font-weight: 400 !important;
     text-transform: uppercase !important;
+    padding: 10px 5px !important;
   }
 }
 #menu-item-2783 {
